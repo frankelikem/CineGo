@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineGo | Booking Summary</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html"><span class="logo-mark">▶</span> CineGo</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="movies.html">Movies</a><a href="about.html">About</a>
+    </nav>
+    <a class="button button-small" href="booking.html">New booking</a>
+  </header>
+
+  <main class="container narrow-container">
+    <section class="confirmation-card">
+      <div class="confirmation-icon" aria-hidden="true">✓</div>
+      <p class="eyebrow">BOOKING SUMMARY</p>
+      <h1 id="confirmTitle">Review your booking</h1>
+      <p id="confirmMessage" class="muted-copy">Check your details below.</p>
+      <div id="bookingSummary" class="summary-list">
+        <div><span>Customer</span><strong id="summaryName">—</strong></div>
+        <div><span>Movie</span><strong id="summaryMovie">—</strong></div>
+        <div><span>Date</span><strong id="summaryDate">—</strong></div>
+        <div><span>Showtime</span><strong id="summaryTime">—</strong></div>
+        <div><span>Tickets</span><strong id="summaryTickets">—</strong></div>
+        <div><span>Ticket type</span><strong id="summaryType">—</strong></div>
+        <div class="summary-total"><span>Total</span><strong id="summaryTotal">—</strong></div>
+      </div>
+      <p class="notice">This is a practice booking summary only. No real ticket has been issued.</p>
+      <div class="button-row button-row-stack">
+        <a class="button" href="booking.html">Make another booking</a>
+        <a class="button button-outline" href="movies.html">Back to movies</a>
+      </div>
+      <p id="emptyBooking" class="form-message" hidden>No booking details were found. Please start from the booking page.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="logo" href="index.html"><span class="logo-mark">▶</span> CineGo</a><p>Thanks for choosing CineGo.</p></footer>
+</body>
+</html>

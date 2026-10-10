@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineGo | Book Tickets</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html"><span class="logo-mark">▶</span> CineGo</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="movies.html">Movies</a><a href="about.html">About</a>
+    </nav>
+    <a class="button button-small" href="movies.html">All movies</a>
+  </header>
+
+  <main class="container narrow-container">
+    <section class="page-intro page-intro-left">
+      <p class="eyebrow">YOUR MOVIE NIGHT STARTS HERE</p>
+      <h1>Book your <span>tickets.</span></h1>
+      <p>Fill in the details below. You can review everything on the next page.</p>
+    </section>
+
+    <section class="form-card">
+      <div class="form-heading"><div><h2>Booking details</h2><p>Fields marked as required must be completed.</p></div><span class="step-label">01 / 02</span></div>
+      <form id="bookingForm">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Ama Mensah" required minlength="2">
+        </div>
+        <div class="field">
+          <label for="movie">Choose a movie</label>
+          <select id="movie" name="movie" required>
+            <option value="">Select a movie</option>
+            <option>Interstellar</option>
+            <option>Spider-Man: No Way Home</option>
+            <option>Black Panther</option>
+            <option>Avengers: Endgame</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="field">
+            <label for="tickets">Number of tickets</label>
+            <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required>
+          </div>
+        </div>
+        <fieldset class="field-group">
+          <legend>Choose a showtime</legend>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="time" value="3:00 PM" required><span>3:00 PM</span></label>
+            <label class="choice"><input type="radio" name="time" value="6:00 PM"><span>6:00 PM</span></label>
+            <label class="choice"><input type="radio" name="time" value="9:00 PM"><span>9:00 PM</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="field-group">
+          <legend>Ticket type</legend>
+          <div class="choice-grid choice-grid-two">
+            <label class="choice"><input type="radio" name="type" value="Regular" required><span>Regular <strong>GHS 35</strong></span></label>
+            <label class="choice"><input type="radio" name="type" value="Student"><span>Student <strong>GHS 25</strong></span></label>
+          </div>
+        </fieldset>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        <button class="button button-full" type="submit">Review booking <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="logo" href="index.html"><span class="logo-mark">▶</span> CineGo</a><p>This demo does not take payments or reserve real cinema seats.</p></footer>
+</body>
+</html>
